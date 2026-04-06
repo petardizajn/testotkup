@@ -24,9 +24,7 @@ nav{position:fixed;top:0;width:100%;background:#fff;display:flex;justify-content
 .mobile-menu {
   display: none;
 }
-.mobile-menu.show {
-  display: flex;
-}
+.mobile-menu.show{display:flex}
 /* HOVER ANIMACIJA ZA BURGER MENU LINKOVE */
 .mobile-menu a {
   position: relative;
@@ -223,7 +221,7 @@ footer a {
   "@type":"LocalBusiness",
   "name":"Otkup Automobila Badža",
   "image":"https://tvoj-sajt.com/slike/1.jpg",
-  "telephone":"+381601234567",
+  "telephone":"+381611387356",
   "address":{"@type":"PostalAddress","streetAddress":"Ulica 123","addressLocality":"Subotica","addressCountry":"RS"},
   "url":"https://tvoj-sajt.com",
   "priceRange":"€€"
@@ -316,7 +314,7 @@ footer a {
 </div>
 </div>
 
-<a href="tel:+381601234567" class="call-button"><i class="fas fa-phone phone-right"></i> Pozovite odmah</a>
+<a href="tel:+381611387356" class="call-button"><i class="fas fa-phone phone-right"></i> Pozovite odmah</a>
 
 <section id="about" class="about">
 <h2>O nama</h2>
@@ -325,29 +323,17 @@ Naš fokus je poverenje, brzina i maksimalna korektnost prema svakom klijentu.</
 </section>
 
 <section id="contact">
-<h2>Zatražite ponudu</h2>
-<form action="https://formsubmit.co/psamcevic@gmail.com" method="POST">
-  <input type="text" name="ime" placeholder="Ime" required>
-  <input type="tel" name="telefon" placeholder="Telefon" required>
-  <input type="text" name="vozilo" placeholder="Model vozila" required>
-  <textarea name="poruka" placeholder="Poruka"></textarea>
-  
-  <!-- hidden -->
-  <input type="hidden" name="_subject" value="Nova poruka sa sajta - Otkup vozila">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="https://tvoj-sajt.com/hvala.html">
-  
-  <button type="submit">Pošalji</button>
-  </form>
+  <h2>Pozovite odmah</h2>
+  <p>Kontaktirajte nas i dobijate ponudu odmah: <a href="tel:++381611387356" style="color:#ff4b2b;font-weight:bold;">+381 61 1387356</a></p>
 </section>
 </main>
 
 <footer>
   <div class="footer-cta">
     <p>Pozovi odmah</p>
-    <a href="tel:+381601234567">
+    <a href="tel:+381611387356">
   </div>
-<div class="phone"><i class="fas fa-phone phone-right" style="color:#ff4b2b;"></i> +381 60 1234567</div>
+<div class="phone"><i class="fas fa-phone phone-right" style="color:#ff4b2b;"></i> +381 61 1387356</div>
 <div class="cities">
   <span>Beograd</span>
   <span>Novi Sad</span>
@@ -404,17 +390,6 @@ document.addEventListener('DOMContentLoaded', () => {
   animateHero();
   
 });
-window.addEventListener('resize', () => {
-  const menu = document.getElementById("menu");
-  const burger = document.getElementById("burger");
-
-  if (window.innerWidth > 768) {
-    menu.classList.remove("show");
-    burger.classList.remove("active");
-  }
-});
-
-</script>
 </script>
 
 </body>
