@@ -391,17 +391,7 @@ document.addEventListener('DOMContentLoaded', () => {
   moveArrow();
   setInterval(moveArrow,2000);
 
-  const hero = document.querySelector('.hero-image');
-  let scale = 1; let direction = 0.0005;
-  function animateHero(){
-    scale += direction;
-    if(scale>1.05 || scale<1) direction*=-1;
-    hero.style.backgroundSize = `${scale*150}%`;
-    requestAnimationFrame(animateHero);
-  }
-  animateHero();
-  
-});
+ 
 </script>
 
 </body>
