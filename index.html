@@ -1,21 +1,11 @@
 <!DOCTYPE html>
 <html lang="sr">
 <head>
-<title>Otkup Automobila Srbija | Otkup Vozila Beograd Novi Sad Niš | Isplata Odmah</title>
-
-<meta name="description" content="Otkup automobila u Beogradu, Novom Sadu, Nišu i celoj Srbiji. Otkup havarisanih i neispravnih vozila uz isplatu odmah. Besplatna procena u roku od 30 minuta.">
-
-<meta name="robots" content="index, follow">
-<meta name="author" content="Otkup Automobila Badža">
-
-<link rel="canonical" href="https://tvoj-sajt.com/">
-
-<!-- Open Graph (za deljenje) -->
-<meta property="og:title" content="Otkup Automobila Srbija - Isplata Odmah">
-<meta property="og:description" content="Prodajte auto za 30 minuta. Dolazimo na adresu i plaćamo odmah.">
-<meta property="og:image" content="https://tvoj-sajt.com/slike/1.jpg">
-<meta property="og:url" content="https://tvoj-sajt.com">
-<meta property="og:type" content="website">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Otkup Automobila Badža | Brza Procena i Isplata Odmah u Srbiji</title>
+<meta name="description" content="Otkup automobila, motora, kombija i pickup vozila širom Srbije. Brza procena i isplata odmah. Beograd, Novi Sad, Niš, Kragujevac, Subotica, Pančevo, Kruševac, Zrenjanin, Čačak i ostali gradovi.">
+<meta name="keywords" content="otkup automobila, otkup vozila, prodaja auta, otkup kombija, otkup motora, otkup pickup, Srbija">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -71,10 +61,9 @@ header.hero-image{
   justify-content:center;
   text-align:center;
   color:#fff;
-  background:url('slike/1.jpg') center center no-repeat;
-  background-size:cover;
+  background:url('slike/1.jpg') center/cover no-repeat;
   position:relative;
-  overflow:hidden; /* KLJUČNO */
+  transition:background-size 0.1s linear;
 }
 header.hero-image::after{
   content:''; position:absolute; top:0; left:0; width:100%; height:100%;
@@ -287,11 +276,11 @@ footer a {
 <section id="steps">
 <h2>Kako funkcioniše otkup</h2>
 <div class="steps">
-<div class="step"><span>1</span><p>Pozovite i recite podatke o vozilu</p></div>
+  <div class="step"><span>1</span><p>Pozovite i recite podatke o vozilu</p></div>
 
-<div class="step"><span>2</span><p>Odmah dobijate najbolju ponudu</p></div>
-
-<div class="step"><span>3</span><p>Isplata na licu mesta – bez čekanja</p></div>
+  <div class="step"><span>2</span><p>Odmah dobijate najbolju ponudu</p></div>
+  
+  <div class="step"><span>3</span><p>Isplata na licu mesta – bez čekanja</p></div>
 <div class="arrow-guide"><i class="fas fa-arrow-down"></i></div>
 </div>
 </section>
@@ -392,7 +381,17 @@ document.addEventListener('DOMContentLoaded', () => {
   moveArrow();
   setInterval(moveArrow,2000);
 
- 
+  const hero = document.querySelector('.hero-image');
+  let scale = 1; let direction = 0.0005;
+  function animateHero(){
+    scale += direction;
+    if(scale>1.05 || scale<1) direction*=-1;
+    hero.style.backgroundSize = `${scale*150}%`;
+    requestAnimationFrame(animateHero);
+  }
+  animateHero();
+  
+});
 </script>
 
 </body>
